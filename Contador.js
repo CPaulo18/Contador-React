@@ -1,0 +1,18 @@
+const Contador = () => {
+    const [cuenta, setCuenta] = React.useState(0);
+  
+    const aumentar = () => setCuenta(cuenta + 1);
+    const disminuir = () => setCuenta(cuenta - 1);
+  
+    return (
+      <>
+        <h1 className={cuenta >= 0 ? "positivo" : "negativo"}>
+          Contador: {cuenta}
+        </h1>
+        <hr />
+        <button onClick={aumentar}>Aumentar</button>
+        <button onClick={disminuir}>Disminuir</button>
+      </>
+    );
+  };
+
